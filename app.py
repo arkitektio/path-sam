@@ -82,7 +82,6 @@ app = App(
     __version__,
     description="Segment Anything (micro-sam) along a drawn path, in 3D",
     author="jhnnsrs",
-    scopes=["read", "write"],
     services=[mikro_service],
     app_context=SamCache,
 )
