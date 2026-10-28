@@ -1,0 +1,19 @@
+build_command:
+- docker
+- buildx
+- build
+- --platform
+- '{platform}'
+- '{output}'
+- -t
+- '{tag}'
+- -f
+- '{dockerfile}'
+- .
+capabilities: []
+description: micro-sam on the CPU (slow; for hosts without an NVIDIA GPU)
+dockerfile: Dockerfile
+platforms:
+# Not arm64: micro-sam's bioimage-cpp has no aarch64 wheel, and the slim image no compiler.
+- linux/amd64
+selectors: []
