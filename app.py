@@ -59,7 +59,7 @@ from path_sam.placement import _ON_A_FACE, dataset_name_of, lens_volume, path_fr
 from path_sam.sam import MODEL_TYPES, MicroSam, load_predictor
 
 # The version of the app. A release is the commit tagged with it (v1.2.3).
-__version__ = "0.2.1"
+__version__ = "0.2.2"
 
 
 @dataclass

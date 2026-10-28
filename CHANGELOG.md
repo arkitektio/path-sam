@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.2.2 (2026-10-28)
+
+### Bug Fixes
+
+- The recorded manifest carries the scopes a run asks for (arkitekt 10.0.2)
+  ([`f70ab9d`](https://github.com/arkitektio/path-sam/commit/f70ab9d13e2f378bae116b84f1c85cc8a43a9371))
+
+
 ## v0.2.1 (2026-10-28)
 
 ### Bug Fixes
