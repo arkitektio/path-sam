@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.2.3 (2026-10-28)
+
+### Bug Fixes
+
+- Release an image built on arkitekt 10.0.2
+  ([`f1831d0`](https://github.com/arkitektio/path-sam/commit/f1831d0d95abbef8a372687aeae3ffe1bcebe2e1))
+
+### Build System
+
+- Lock arkitekt 10.0.2
+  ([`961e56e`](https://github.com/arkitektio/path-sam/commit/961e56e2b8403a10a845db7e5fff8a477b701cec))
+
+
 ## v0.2.2 (2026-10-28)
 
 ### Bug Fixes
