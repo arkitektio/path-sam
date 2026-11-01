@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.2.5 (2026-11-01)
+
+### Bug Fixes
+
+- Release an image built on arkitekt 13.0.0
+  ([`0633dd1`](https://github.com/arkitektio/path-sam/commit/0633dd16e5b17991d6c9bffd3a11b2b4a0a1f0a2))
+
+### Build System
+
+- Lock arkitekt 13.0.0
+  ([`c62eb06`](https://github.com/arkitektio/path-sam/commit/c62eb066de93ad2776244e9c9e08db1f3fd2bf96))
+
+
 ## v0.2.4 (2026-11-01)
 
 ### Bug Fixes
