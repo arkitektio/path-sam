@@ -38,7 +38,7 @@ import os
 import time
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Annotated, Any, Optional, Tuple
+from typing import Annotated, Any
 
 import numpy as np
 import xarray as xr
@@ -286,10 +286,10 @@ def segment_anything_along_path(
     radius_um: Annotated[float, Description("How far from the path the structure may reach")] = 1.5,
     model: Annotated[SamModel, Description("The micro-sam model: light microscopy, EM organelles or plain SAM")] = SamModel.VIT_B_LM,
     field_um: Annotated[
-        Optional[float], Description("Half the width of a cross-section SAM sees. Default 3x radius")
+        float | None, Description("Half the width of a cross-section SAM sees. Default 3x radius")
     ] = None,
     frame_step_um: Annotated[
-        Optional[float], Description("Distance between cross-sections. Default a third of the radius")
+        float | None, Description("Distance between cross-sections. Default a third of the radius")
     ] = None,
     prompt_every_um: Annotated[float, Description("Distance between prompted cross-sections")] = 2.0,
     n_negative: Annotated[int, Description("Background points per prompt, around the structure")] = 8,
@@ -310,9 +310,9 @@ def segment_anything_along_path(
     mikro: Mikro,
     task: Task,
     cache: SamCache,
-) -> Tuple[
+) -> tuple[
     Annotated[LabelMask, Description("The segmentation, as a label crop")],
-    Annotated[Optional[MeshLens], Description("The surface, if asked for")],
+    Annotated[MeshLens | None, Description("The surface, if asked for")],
 ]:
     """Segment Anything Along Path
 
