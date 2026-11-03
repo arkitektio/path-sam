@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.2.7 (2026-11-03)
+
+### Bug Fixes
+
+- Build on arkitekt 13.1.0
+  ([`7de88ff`](https://github.com/arkitektio/path-sam/commit/7de88ffb2102f3ef3cf0efbbfb5129884e488042))
+
+
 ## v0.2.6 (2026-11-03)
 
 ### Bug Fixes
