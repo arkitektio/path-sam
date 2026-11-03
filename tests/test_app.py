@@ -155,7 +155,7 @@ def test_nothing_to_prompt_is_empty_not_an_error():
 def test_a_path_drawn_on_a_scene_is_placed_on_the_voxels(synth):
     mikro = StubMikro(graph(synth.spacing))
     path = drawn_path(synth.rough, synth.spacing)
-    vertices, frame = path_frame(mikro, path, StubLens(synth.volume), ("z", "y", "x"))
+    vertices, frame = path_frame(mikro, path, StubLens(synth.volume, synth.spacing), ("z", "y", "x"))
 
     assert np.allclose(vertices, synth.rough)
     assert np.allclose(frame.to_drawn(vertices), np.asarray(path.vectors))
@@ -163,7 +163,7 @@ def test_a_path_drawn_on_a_scene_is_placed_on_the_voxels(synth):
 
 def test_the_action_uploads_a_label_crop_placed_on_the_axon(synth, fake_sam):
     mikro = StubMikro(graph(synth.spacing))
-    lens = StubLens(synth.volume)
+    lens = StubLens(synth.volume, synth.spacing)
     label, mesh = segment_anything_along_path(
         drawn_path(synth.rough, synth.spacing), lens, **PARAMS, with_mesh=True,
         mikro=mikro, task=Task.local(), cache=SamCache(VoxelCache(512 * 1024**2)),
@@ -191,7 +191,7 @@ def test_the_action_uploads_a_label_crop_placed_on_the_axon(synth, fake_sam):
 
 def test_a_re_run_with_other_prompts_reuses_the_embeddings_and_the_voxels(synth, fake_sam):
     mikro = StubMikro(graph(synth.spacing))
-    lens = StubLens(synth.volume)
+    lens = StubLens(synth.volume, synth.spacing)
     cache = SamCache(VoxelCache(512 * 1024**2))
     path = drawn_path(synth.rough, synth.spacing)
     segment_anything_along_path(path, lens, **PARAMS, mikro=mikro, task=Task.local(), cache=cache)
@@ -214,7 +214,7 @@ def test_nothing_to_segment_is_said_not_returned_empty(synth, fake_sam):
     flat = np.full_like(synth.volume, 100)
     with pytest.raises(ValueError, match="stands out"):
         segment_anything_along_path(
-            drawn_path(synth.rough, synth.spacing), StubLens(flat), **PARAMS,
+            drawn_path(synth.rough, synth.spacing), StubLens(flat, synth.spacing), **PARAMS,
             mikro=StubMikro(graph(synth.spacing)), task=Task.local(), cache=SamCache(VoxelCache(512 * 1024**2)),
         )
 

@@ -51,11 +51,11 @@ from mikro.api.schema import (
     ValueRelation,
 )
 from mikro.arkitekt.specs import LabelMask, PathAnnotation, SingleChannelVolume
-from mikro.arkitekt.widgets import reachable_from
+from mikro.arkitekt.widgets import overlapping
 
 from path_sam import geometry
 from path_sam.cache import Lru, VoxelCache
-from path_sam.placement import _ON_A_FACE, dataset_name_of, lens_volume, path_frame, spacing_um_of
+from path_sam.placement import _ON_A_FACE, dataset_name_of, lens_volume, path_frame, voxel_size_um
 from path_sam.sam import MODEL_TYPES, MicroSam, load_predictor
 
 # The version of the app. A release is the commit tagged with it (v1.2.3).
@@ -159,7 +159,7 @@ def segment_path(
             f"over {list(space_axes)}, the image is {shape.tolist()}."
         )
 
-    spacing_um = voxels.remember(str(lens.id), "spacing", lambda: spacing_um_of(mikro, lens))
+    spacing_um = voxels.remember(str(lens.id), "spacing", lambda: voxel_size_um(lens))
     calibrated = all(axis in spacing_um for axis in space_axes)
     spacing = np.array([spacing_um[axis] for axis in space_axes]) if calibrated else np.ones(3)
     if not calibrated:
@@ -282,7 +282,7 @@ def upload_mesh(
 @app.action(name="Segment Anything Along Path", collections=COLLECTIONS, concurrency="serial")
 def segment_anything_along_path(
     path: Annotated[PathAnnotation, Description("The PATH to segment along: a rough tracing is enough")],
-    lens: Annotated[SingleChannelVolume, reachable_from("path"), Description("The channel the structure is stained in")],
+    lens: Annotated[SingleChannelVolume, overlapping("path"), Description("The channel the structure is stained in")],
     radius_um: Annotated[float, Description("How far from the path the structure may reach")] = 1.5,
     model: Annotated[SamModel, Description("The micro-sam model: light microscopy, EM organelles or plain SAM")] = SamModel.VIT_B_LM,
     field_um: Annotated[
