@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.2.6 (2026-11-03)
+
+### Bug Fixes
+
+- Read the voxel size the server resolves for a lens
+  ([`39b815d`](https://github.com/arkitektio/path-sam/commit/39b815dc750a3b9c6dbce1066d8bd3548be9e2cc))
+
+### Refactoring
+
+- Adopt Python 3.11 typing (X | None, builtin generics, collections.abc)
+  ([`41d1167`](https://github.com/arkitektio/path-sam/commit/41d11679da6682c4821f25ebc197ab1abdf28e9e))
+
+
 ## v0.2.5 (2026-11-01)
 
 ### Bug Fixes
