@@ -2,6 +2,17 @@
 
 <!-- version list -->
 
+## v0.2.8 (2026-11-10)
+
+### Bug Fixes
+
+- Test stubs offer xarray_data, as mikro 13 lenses do
+  ([`6961dd5`](https://github.com/arkitektio/path-sam/commit/6961dd564e6c54e2a51cd275151962dada8fa5d4))
+
+- **deps**: Arkitekt 14.1.0 and mikro 13, with the Open in Arkitekt badge
+  ([`1de8653`](https://github.com/arkitektio/path-sam/commit/1de8653451a6ffe5a7e42dba113240cb5d4b707c))
+
+
 ## v0.2.7 (2026-11-03)
 
 ### Bug Fixes
