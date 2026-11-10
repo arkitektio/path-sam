@@ -1,5 +1,9 @@
 # path-sam
 
+<!-- arkitekt:badge -->
+[![Open in Arkitekt](https://arkitekt.live/img/badge/open-in-arkitekt.svg)](https://arkitekt.live/deeplink?orkestrator=%2Fdo%2Fv1%2Frepo.install%3Fsource%3Doci%253Aghcr.io%252Farkitektio%252Fpath-sam)
+<!-- /arkitekt:badge -->
+
 Segment Anything along a drawn path, in 3D. You trace a rough PATH along an axon,
 a vessel or a fibre in the orkestrator 3D scene, run **Segment Anything Along Path**
 from the shape's card, and get back a label crop (and, if you ask, a surface).
