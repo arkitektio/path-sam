@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.2.11 (2026-11-15)
+
+### Bug Fixes
+
+- Publish the release its tag push kept back
+  ([`1f6496c`](https://github.com/arkitektio/path-sam/commit/1f6496ce15e5cb9925db0a47f2b927f95c4aaf2d))
+
+
 ## v0.2.10 (2026-11-15)
 
 ### Bug Fixes
