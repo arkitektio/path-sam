@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.2.10 (2026-11-15)
+
+### Bug Fixes
+
+- **deps**: Rekuest 15.0.1 and arkitekt-runtime 10.0.1
+  ([`a0cb2ff`](https://github.com/arkitektio/path-sam/commit/a0cb2ff8ee83188fb9bd6139dcbcf297f0e7d4cc))
+
+
 ## v0.2.9 (2026-11-15)
 
 ### Bug Fixes
