@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.2.9 (2026-11-15)
+
+### Bug Fixes
+
+- **deps**: Arkitekt 16, on agent protocol 2
+  ([`8b387c3`](https://github.com/arkitektio/path-sam/commit/8b387c3bd49947c16c931e6c95bf0e908925b80c))
+
+
 ## v0.2.8 (2026-11-10)
 
 ### Bug Fixes
