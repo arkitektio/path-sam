@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.2.12 (2026-11-15)
+
+### Bug Fixes
+
+- **deps**: Arkitekt 17 and arkitekt-spec 11
+  ([`ba4fe84`](https://github.com/arkitektio/path-sam/commit/ba4fe842ce7267fed52deab40042d02c46d937c0))
+
+
 ## v0.2.11 (2026-11-15)
 
 ### Bug Fixes
