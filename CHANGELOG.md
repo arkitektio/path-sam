@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.2.13 (2026-11-16)
+
+### Bug Fixes
+
+- Release an image built on arkitekt 18
+  ([`01e46a1`](https://github.com/arkitektio/path-sam/commit/01e46a1f81589a341f3269a23cad2a6727f188b8))
+
+### Build System
+
+- Lock arkitekt 18
+  ([`b5997af`](https://github.com/arkitektio/path-sam/commit/b5997afa3112453929f15657cfbacfd9204438a2))
+
+
 ## v0.2.12 (2026-11-15)
 
 ### Bug Fixes
