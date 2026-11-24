@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.2.14 (2026-11-24)
+
+### Bug Fixes
+
+- Build on arkitekt 18.5.2, rekuest 18, arkitekt-spec 13 and mikro 14.2
+  ([`736f2d3`](https://github.com/arkitektio/path-sam/commit/736f2d389df08582415f3fc7cc3face62b85cad6))
+
+
 ## v0.2.13 (2026-11-16)
 
 ### Bug Fixes
